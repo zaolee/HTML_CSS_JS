@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제 2</title>
+	<style>
+		#container {
+			width: 520px;
+			/* 길이를 520px로 지정 */
+			border: 1px solid black;
+			/* 선 색 지정 */
+			padding: 20px 40px;
+			/* 여백은 위아래 = 20px 오른쪽,왼쪽 = 40px  */
+			margin: 0 auto;
+			/* 눈 밖에 보이는 공간?? */
+		}
+
+		fieldset {
+			margin-bottom: 15px;
+		}
+
+		legend {
+			font-weight: bold;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+		/* 블랫을 사라지게 만들어주는 스타일 */
+
+		li {
+			line-height: 30px;
+		}
+		/* 줄에 들어가는 띄우는 공간 */
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<!-- id-># 을 사용 즉, #container를 적용해주세요 (feat: .(점)인 경우는 class) -->
+		<h1>프런트엔드 개발자 지원서 </h1>
+		<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+		<hr>
+		<form>
+			<h4>개인 정보</h4>
+			<ul>
+				<li>
+					<label for="u-name">이름</label>
+					<input type="text" id="u-name" placeholder="공백 없이 입력하세요">
+				</li>
+				<li>
+					<label for="u-ph">연락처</label>
+					<input type="text" id="u-ph">
+				</li>
+			</ul>
+			<b>지원 분야</b>
+			<!-- <h4>지원 분야</h4>도 가능 -->
+			<!-- 헤드라인 쓰는거니까 h? 쓰기 추천 -->
+			<ul>
+				<li>
+					<input type="radio" id="web-pub" name="reg" value="wp">
+					<label for="web-pub">웹 퍼블리싱</label>
+				</li>
+				<li>
+					<label for="web-appdev"></label><input type="radio" id="web-appdev" name="reg" value="wad">웹 애플리케이션 개발</label>
+				</li>
+				<li>
+					<label for="dev-imp"></label><input type="radio" id="dev-imp" name="reg" value="di">개발 환경 개선</label>
+				</li>
+			</ul>
+			<!-- <b>지원 동기</b>
+			<p></p> -->
+			<h4>지원 동기</h4>
+			<textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+			<div>
+				<input type="submit" value="접수하기">
+				<input type="reset" value="다시 쓰기">
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+		<meta charset="UTF-8">
+		<title>로그인</title>
+  </head>
+  <body>
+	<form action="server.jsp" method="post">
+  <!-- method="post" 옵션을 넣어주면 주소창에 내용이 보이지 않게 됨 -->
+    <fieldset>
+      <input type="hidden" name="url" id="url" value="사이트를 통한 직접 로그인">
+    	<label>아이디: <input type="text" name="user_id" id="user_id" size="10"></label>
+      <label>비밀번호: <input type="password" name="user_pw" id="user_pw" size="10"></label>
+      <input type="submit" value="로그인">
+    </fieldset>
+  </form>
+  </body>
+</html>
