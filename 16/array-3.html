@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Array 객체의 메서드</title>
+</head>
+<body>
+	<script>
+		let nums = [1,2,3];
+		let chars = ["a", "b", "c", "d"];
+
+		// 두개의 배열 합치기 concat()
+		let numsChars = nums.concat(chars);
+		document.write("chars에 nums 합치면: " + numsChars);
+		document.write("<hr>"); // 한줄 바꾸기
+
+		// 배열 내의 요소 합치기 join
+		let str1 = nums.join();
+		document.write(nums);
+		document.write("<br>구분자 없이: " + str1);
+
+		let str2 = nums.join('-');
+		document.write(nums);
+		document.write("<br>구분자 설정: " + str1);
+		document.write("<hr>");
+
+		// 요소 추가 push()
+		let ret1 = nums.push(4,5); // 맨끝에 요소 추가,, 4랑 5 추가합니다. + return값은 새로운 length값 반환
+		document.write("요소 추가 : " + nums);
+		document.write(" 길이는 : " + ret1);
+
+		// 요소 추출 pop(), shift()
+		let popped1 = chars.pop(); // 마지막 요소를 꺼냄
+		document.write("<hr>마지막 요소는 : " + popped1);
+
+		let shift1 = chars.shift(); // 첫번째 요소를 꺼냄
+		document.write("<br>첫번째 요소는 : " + shift1);
+
+		document.write("<br>나머지 요소는 : " + chars); // ["b", "c"]
+	</script>
+</body>
+</html>

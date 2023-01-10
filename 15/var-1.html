@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var 예약어로 지역 변수 선언하기</title>
+</head>
+<body>
+	<script>
+    var sum; // 전역변수
+    function addNumber(){
+      var sum = 10 + 20;
+      console.log(sum);
+      // sum은 지역변수 임으로 이 안에서만 사용가능함
+    }		
+    addNumber();
+    console.log(sum); // 에러뜸 -> 전역변수로 바꿔주자
+  </script>
+</body>
+</html>

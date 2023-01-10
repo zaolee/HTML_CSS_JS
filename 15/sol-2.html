@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>연습문제 2</title>
+</head>
+
+<body>
+   <script>
+      let num1 = parseInt(prompt("비교할 첫번째 숫자를 입력하시길.."));
+      let num2 = parseInt(prompt("비교할 두번째 숫자를 입력하시길.."));
+
+      (function (x, y) {
+         if (x === y) {
+            alert(x + "이" + y + "같습니다.");
+         } else if (x > y) {
+            alert(x + "이" + y + "보다 큽니당.");
+         } else {
+            alert(y + "이" + x + "보다 큽니당.");
+         }
+      }(num1, num2));
+      // 익명 함수 쓰려면 매개변수를 저기다 넣으면 됨
+
+   //  compareTwo(num1, num2);
+   //  function compareTwo(x,y){
+   //    if(x===y){
+   //       alert("같다.")
+   //    } else if(x>y){
+   //       alert(x + "가" + y + "보다 크다");
+   //    } else {
+   //       alert(y + "가" + x + "보다 크다");
+   //    }
+   //  }
+   </script>
+</body>
+
+</html>

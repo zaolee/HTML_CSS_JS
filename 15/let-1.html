@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>
+    function calcSum(n) {
+      let sum = 0; // 지역변수 -> 중괄호 벗어나면 쓸수없음
+      for(let i = 1; i < n + 1; i++) {						
+        sum += i;	
+      }      
+      console.log(sum);
+    }    
+    calcSum(10);    
+    // console.log(sum); -> 에러뜸(let은 블록변수이기 때문임)
+  </script>
+</body>
+</html>

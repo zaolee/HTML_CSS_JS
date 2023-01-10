@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>
+    // var sum;
+    function calcSum(n) {
+      sum = 0; // 전역변수 선언 hoisting
+      // 여기서 var sum =0 으로 선언한 경우는 밖에서 사용 못해, but 함수 내에서({ }안에서)는 전역변수로 사용가능 -> 겁나헷갈림
+      // 함수변수 var : hoisting, 재선언, scope 이슈 -> 이런 문제가 있음..
+      for(let i = 1; i < n + 1; i++) {						
+        sum += i;	
+      }            
+    }    
+    calcSum(10);    
+    console.log(sum); // 호이스팅이 되서 밖에서 사용가능
+  </script>
+</body>
+</html>
