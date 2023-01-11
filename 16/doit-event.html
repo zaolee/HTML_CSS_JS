@@ -1,24 +1,37 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이벤트 공지</title>
   <style>
-    #container 
-    {
-      width:600px;
-      margin:10px auto;
-      padding:10px;
-      text-align:center;
-    }        
+    #container {
+      width: 600px;
+      margin: 10px auto;
+      padding: 10px;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
   <div id="container">
     <h1>이벤트 공지</h1>
     <img src="images/doit.jpg">
-    <p><a href="doit-main.html">자세히 보기</a></p>  
+    <p><a href="doit-main.html" onclick="loadURL(this.href); return false;">자세히 보기</a></p>
+    <!-- return false -> a태그가 두잇뭐시기 저걸로 이동 못하게 방지, a태그 기능 막기. -->
+    <!-- retuen false를 쓰지 않으면 창 두개다 이동함 -->
+    <!-- <p><a href="doit-main.html" target="_self">자세히 보기</a></p> : 타겟이 기본적으로 self로 되어있음  -->
   </div>
+  <script>
+    function loadURL(url) {
+      window.opener.location.href = url; // url이 기존 main에서 doit-main.html로 바뀜
+      // window.open()으로 윈도우 객체가 생성된 JS는 window.opener 프로퍼티에 윈도우를 연 객체(부모)를 저장한다. 
+      // 이를 이용하면 자식창에서 부모창을 컨트롤 하거나 서로간 데이터를 주고받는게 가능하다.
+      window.close();
+    }
+  </script>
 </body>
+
 </html>

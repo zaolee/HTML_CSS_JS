@@ -14,5 +14,12 @@
   </head>
   <body>    
     <h1>당첨자 발표</h1>
+    <script>
+      let seed = prompt("전체 응모자 수 : " , "");
+      let picked = Math.floor((Math.random()*seed)+1);
+      // 0부터 0.99까지의 수에서 seed를 곱해주고 +1 해준뒤 버림 하면 소수점 버려지고 정수만 남아      
+      document.write("전체 응모자 수 : " + seed + "명");
+      document.write("<br>당첨자 :" + picked + "번");
+    </script>
   </body>
 </html>

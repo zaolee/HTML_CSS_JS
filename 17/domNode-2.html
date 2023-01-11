@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+  <style>
+    #container{
+      width:500px;
+      margin:10px auto;
+      padding:20px;
+    }
+    #info {
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">    
+    <h1>DOM을 공부합시다</h1>
+    <a href="#" onclick="addP(); this.onclick='';">더 보기</a>    
+    <div id="info"></div> <!-- div태그는 아무 대용 없이 생성만 되어 있는 상태임 -->
+  </div>
+  <script>
+    function addP() {
+      var newP = document.createElement("p"); // p 태그 만든거
+      var txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다."); // 텍스트 노드 생성함
+      newP.appendChild(txtNode); // newP에 텍스트 노드 넣음
+      document.getElementById("info").appendChild(newP); // newP를 info(div태그)에 넣은거
+    }
+  </script>
+</body>
+</html>
