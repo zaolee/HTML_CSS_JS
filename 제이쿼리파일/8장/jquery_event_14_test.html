@@ -1,0 +1,35 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title> 이벤트 </title>
+   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript">
+      //<![CDATA[
+      $(function () {
+         $("h1").delegate("a", "mouseover focus", function () {
+            $(this).css("background-color", "pink");
+         });
+
+         $("h1").html("<a href='#'>내용</a>"); // 원래는 없었지만, 동적으로 생김
+
+         $("h1 a").on("mouseout blur", function () {
+            $(this).css("background-color", "yellow");
+         }); 
+         
+         // bind는 동적으로 생긴건 적용되지 않음
+         $("h1 a").bind("click", function () {
+            $(this).css("background-color", "aqua"); // 되는뎁쇼??..
+         }); 
+      });
+//]]>
+   </script>
+</head>
+
+<body>
+   <h1></h1>
+</body>
+
+</html>

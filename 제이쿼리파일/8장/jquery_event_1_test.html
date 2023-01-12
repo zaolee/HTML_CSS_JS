@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title> 이벤트 </title>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+   <div id="wrap"></div>
+   <iframe src="http://www.easyspub.com/" frameborder="0"
+   width="300" height="200"></iframe>
+   <script type="text/javascript">
+   //<![CDATA[
+      $("iframe").load(function(){
+         $("#wrap").append("<p>로딩완료~~!!</p>");
+      }); // -> iframe의 데이터가 다 와야 뜸 
+
+      $(document).ready(function(){
+         $("#wrap").append("<p>레디완료~~!!</P>");
+      }); // -> 얘는 바로 뜨니까((document)는 여기 컨텐츠임.. 코드 작성한거..) 로딩완료 보다 먼저 뜰 수 밖에 없음
+   
+   //]]>
+   </script>
+</body>
+</html>

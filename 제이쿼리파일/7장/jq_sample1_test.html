@@ -1,0 +1,30 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title> 선택자 </title>
+   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> 
+   <!-- 저걸 넣어줘야 제이쿼리 사용가능함. min : 줄바꿈 안되어있음 -->
+   <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> : cdn방법-->
+
+   <script type="text/javascript">
+      //<![CDATA[
+      // $(document).ready(function(){}); 문서가 준비가 다 되면은,, ready라는 이벤트 () 안의 함수를 실행해주세요
+      // 이렇게 이벤트 함수를 선언함으로써, 기존 body태그 안에 JS를 썻던거와 달리 head 태그에 미리 넣을수 있다. 대신 무조건 써줘야함
+      $(function () { // 짧게 표현한 방식, 이거 써줘야 적용됨
+         $("h1").css("color","pink"); // 제이쿼리
+         document.querySelector("h1").style.color="yellow"; // JS
+      });
+
+      // $(document).ready(); = $(function(){ 실행문 }); 이 형식 기억해두기
+//]]>
+   </script>
+</head>
+
+<body>
+   <h1>제이쿼리</h1>
+</body>
+
+</html>

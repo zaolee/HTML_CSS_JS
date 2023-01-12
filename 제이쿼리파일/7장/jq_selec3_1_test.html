@@ -1,0 +1,25 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> 객체 조작 및 생성 </title>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(function () {
+            $("h2").html("<a href='#'>HTML 메소드</a>"); // a태크처럼 변경 부탁
+            alert( $("h1").html()); // <strong>객체 조작 및 생성</strong> 이 알림창으로 뜸(걍 지정지점부터 싹다 뜸)
+            alert( $("h1").text()); // 객체 조작 및 생성 이 알림창으로 뜸, only 문자만
+        });
+//]]>
+    </script>
+</head>
+
+<body>
+    <h1><strong>객체 조작 및 생성</strong></h1>
+    <h2><em>html()</em></h2>
+</body>
+
+</html>

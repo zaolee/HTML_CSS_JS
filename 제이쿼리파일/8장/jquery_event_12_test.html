@@ -1,0 +1,47 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title> 이벤트 </title>
+   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript">
+      //<![CDATA[
+      $(function () {
+         $("h1 a").on("click", function(){
+            alert("클릭했습니다..")
+            return false; // url이 있으면 그거 방지하려고
+         });
+
+         $("h1 a").on("mouseover Focus", function(){
+            $(this).css("color", "pink"); // this : a태크
+         });
+         $("h1 a").on("mouseout blur", function(){
+            $(this).css("color", "green");
+         });
+
+         $(document).on("mouseover focus", "h2 a", function(){
+            $(this).css("background-color", "yellow");
+         });
+
+         $("h2 a").bind("mouseover focus", "h2 a",function(){
+            $(this).css("background-color", "pink"); // h2태그는 동적으로 생성 되어 있는 것임으로 bind이벤트 적용불가
+         });
+
+         $("h1 a").bind("mouseover focus", "h1 a",function(){
+            $(this).css("background-color", "blue"); // h1태그는 진작에 생성 되어 있는 것임으로 bind이벤트 적용가능
+         });
+
+         $("h2").append("<a herf='#'>생성된 요소</a>")
+      });
+//]]>
+   </script>
+</head>
+
+<body>
+   <h1><a href="#">버튼</a></h1>
+   <h2></h2>
+</body>
+
+</html>
